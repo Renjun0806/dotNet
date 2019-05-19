@@ -52,9 +52,9 @@
             this.MazeGenerete.Name = "MazeGenerete";
             this.MazeGenerete.Size = new System.Drawing.Size(149, 58);
             this.MazeGenerete.TabIndex = 1;
-            this.MazeGenerete.Text = "Generete";
+            this.MazeGenerete.Text = "Generate";
             this.MazeGenerete.UseVisualStyleBackColor = true;
-            this.MazeGenerete.Click += new System.EventHandler(this.MazeGenereteButton_Click);
+            this.MazeGenerete.Click += new System.EventHandler(this.MazeGenerateButton_Click);
             // 
             // sizeGroupBox
             // 

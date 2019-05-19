@@ -37,7 +37,7 @@ namespace Maze
 
         }
 
-        private void MazeGenereteButton_Click(object sender, EventArgs e)
+        private void MazeGenerateButton_Click(object sender, EventArgs e)
         {
             graphics.Clear(BACK_COLOR);
             int row,column = 20;
@@ -61,7 +61,7 @@ namespace Maze
             //迷宮を生成
             Maze maze = new Maze(row, column);
             maze.isRandom = isRandom.Checked;
-            maze.Generete();
+            maze.Generate();
             //迷宮をPanelに描画する
             DrawMaze(maze);
         }
@@ -70,6 +70,7 @@ namespace Maze
         {
             int row, column = 0;
             int halfThickness = THICKNESS / 2;
+
 
             foreach (Maze.Cell cell in maze.Cells)
             {
@@ -112,6 +113,18 @@ namespace Maze
                                                 (column + 1) * INTERVAL + THICKNESS);
                 }
             }
+
+            //スタートセル
+            graphics.FillRectangle(new SolidBrush(Color.Orange), THICKNESS, 
+                                                                 THICKNESS,
+                                                                 INTERVAL - THICKNESS,
+                                                                 INTERVAL - THICKNESS);
+            //ゴールセル
+            graphics.FillRectangle(new SolidBrush(Color.LightGreen), (maze.Max_Column_Index * INTERVAL) + THICKNESS,
+                                                                     (maze.Max_Row_Index * INTERVAL) + THICKNESS,
+                                                                     INTERVAL - THICKNESS,
+                                                                     INTERVAL - THICKNESS);
+
         }
     }
 }

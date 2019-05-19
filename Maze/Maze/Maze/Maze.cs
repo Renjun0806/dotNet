@@ -36,7 +36,7 @@ namespace Maze
         }
 
         //ランダムPrimで迷宮生成
-        public void Generete()
+        public void Generate()
         {
             //乱数生成変数
             //System.Random RND = new System.Random();
