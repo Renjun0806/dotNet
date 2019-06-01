@@ -35,7 +35,7 @@ namespace Maze
 
         }
 
-        //ランダムPrimで迷宮生成
+        //ランダムPrimで迷路生成
         public void Generate()
         {
             //乱数生成変数

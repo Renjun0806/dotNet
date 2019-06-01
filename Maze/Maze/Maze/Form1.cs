@@ -58,11 +58,11 @@ namespace Maze
                 row = column = 20;
                 INTERVAL = 25;
             }
-            //迷宮を生成
+            //迷路を生成
             Maze maze = new Maze(row, column);
             maze.isRandom = isRandom.Checked;
             maze.Generate();
-            //迷宮をPanelに描画する
+            //迷路をPanelに描画する
             DrawMaze(maze);
         }
 
